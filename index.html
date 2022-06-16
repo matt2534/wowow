@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style type="text/css">
+    .container{
+    position: relative;
+    width: 1000px;
+    margin: 50px;
+    height: auto;
+    
+}
+.container .card{
+    position: relative;
+    background: black;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.card:hover{
+    transform: translateY(-20px);
+    box-shadow: 0 20px 2px rgba(0,0,0,0.2);
+}
+.container .card .img-box{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+}
+.container .card:hover .img-box{
+    opacity: 0.5;
+}
+.container .card .img-box img{
+    width: 100%;
+    
+}
+.container .card .content{
+    position: absolute;
+    width: 100%;
+    height: 60%;
+    bottom: -100%;
+    padding: 20px;
+    padding-top: 60px;
+    box-sizing: border-box;
+    text-align: center;
+    transition: 0.5s;
+}
+.container .card:hover .content{
+    bottom: 0;
+}
+.container .card:nth-child(1) .content{
+    background: linear-gradient(0deg,orange, transparent);
+}
+.container .card:nth-child(2) .content{
+    background: linear-gradient(0deg,purple, transparent);
+}
+.container .card:nth-child(3) .content{
+    background: linear-gradient(0deg,brown, transparent);
+}
+.container .card .content h2{
+    margin: 0 0 10px;
+    padding: 0;
+    color: white;
+    font-size: 20px;
+}
+.container .card .content h2 span{
+    color: yellow;
+    font-size: 16px;
+
+}
+.container .card .content p{
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+
+}
+.container .card .content ul{
+    display:flex ;
+    margin: 20px 0 0;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+
+}
+.container .card .content ul li{
+    list-style: none;
+}
+.container .card .content ul li a{
+    color:;
+    padding: 0 10px;
+    font-size: 18px;
+    transition: 0.5s;
+}
+.container{
+    position: relative;
+    width: 1000px;
+    margin: 50px;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 440px;
+    grid-gap: 24px;
+}
+.container .card{
+    position: relative;
+    background: white;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.card:hover{
+    transform: translateY(-20px);
+    box-shadow: 0 20px 2px rgba(0,0,0,0.2);
+}
+.container .card .img-box{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+}
+.container .card:hover .img-box{
+    opacity: 0.5;
+}
+.container .card .img-box img{
+    width: 100%;
+}
+.container .card .content{
+    position: absolute;
+    width: 100%;
+    height: 60%;
+    bottom: -100%;
+    padding: 20px;
+    padding-top: 60px;
+    box-sizing: border-box;
+    text-align: center;
+    transition: 0.5s;
+}
+.container .card:hover .content{
+    bottom: 0;
+}
+.container .card:nth-child(1) .content{
+    background: linear-gradient(0deg,blue, transparent);
+}
+.container .card:nth-child(2) .content{
+    background: linear-gradient(0deg,green, transparent);
+}
+.container .card:nth-child(3) .content{
+    background: linear-gradient(0deg,orange, transparent);
+}
+.container .card:nth-child(4) .content{
+    background: linear-gradient(0deg,brown, transparent);
+}
+.container .card .content h2{
+    margin: 0 0 10px;
+    padding: 0;
+    color: white;
+    font-size: 20px;
+}
+.container .card .content h2 span{
+    color: yellow;
+    font-size: 18px;
+
+}
+.container .card .content p{
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-size: 18px;
+
+}
+.container .card .content ul{
+    display:flex ;
+    margin: 20px 0 0;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+
+}
+.container .card .content ul li{
+    list-style: none;
+}
+.container .card .content ul li a{
+    color: white;
+    padding: 0 10px;
+    font-size: 18px;
+    transition: 0.5s;
+}
+  .button {
+        background-color:red ;
+        -webkit-border-radius: 60px;
+        border-radius: 60px;
+        border: none;
+        color: #eeeeee;
+        cursor: pointer;
+        display: inline-block;
+        font-family: sans-serif;
+        font-size: 20px;
+        padding: 5px 15px;
+        text-align: center;
+        text-decoration: none;
+      }
+      @keyframes glowing {
+        0% {
+          background-color: red;
+          box-shadow: 0 0 5px red;
+        }
+        50% {
+          background-color: #red;
+          box-shadow: 0 0 40px #red;
+        }
+        100% {
+          background-color: #red;
+          box-shadow: 0 0 50px #red;
+        }
+      }
+      .button {
+        animation: glowing 1300ms infinite;
+      }
+
+r{
+	color:red;
+	font-size:24px;
+	}
+    </style>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <title>A wow free gift card now avaliable for free</title>
+</head>
+<body>
+	    <div class="container">
+        <div class="carbd">
+            <div class="img-box">
+              </div>
+            <div class="contbent">
+           
+                 </ul>
+            </div>
+        </div>
+        <div class="carhd">
+            <div class="img-box">
+                <img src="wow2.jpg">
+            </div>
+            <p style="font-family:'Droid Serif','Droid Serif';font-style:italic;font-size: 24px;color:rgba(142,91,34,1);font-weight:'bold'">WOW!! Did you know that it is possible for you to receive free gift cards online -- in the amounts of $500-$1000?<br>
+
+I'm not talking about silly raffles or contests.
+There are secret, little-known ways for you to receive legitimate gift cards from major retailers, just for answering simple surveys and participating in quality control panels. The rewarding of these gift cards is 100% guaranteed.</p>
+            <div class="content"> 
+            </div>
+        </div>
+ <div class="cacrd">
+            <div class="img-box">
+                 </div>
+            <div class="content">
+        </div>
+        </div>
+        </div><br><br><br><br><br><br>
+ <div class="container">
+        <div class="card">
+            <div class="img-box">
+                <img src="images.jpg">
+            </div>
+            <div class="content">
+                <h2>Claim<br><span>$750 paypal gift card now!</span></h2>
+                <p>Your Chance to get $750 to Your PayPal Account!.</p>
+                 <ul>
+                    <li><a href="https://rushingfolder.com/show.php?l=0&u=550914&id=39551&tracking_id=" class="button">CONFIRM YOUR ENTRY NOW</a>
+        </li>
+                 </ul>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="img-box">
+                <img src="cashapp.png">
+            </div>
+            <div class="content">
+                <h2>Win<br><span> $1000 CashApp</span></h2>
+                <p>Finish One Last Step to Win a $1000 CashApp Now!.</p>
+                
+                 <ul>
+                    
+                     <li><a href="https://smrturl.co/o/282127/53271698?s1=" class="button">CONFIRM ENTRY BEFORE IT'S LATE</a>
+        </li>
+                 
+                 </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="img-box">
+                <img src="Walmart.jpg">
+            </div>
+            <div class="content">
+                <h2>Free<br><span>$100 walmart gift card  </span></h2>
+                <p>You can be the lucky one to get this free gift card. join and Get a $100 Walmart Gift Card! 
+</p>
+                       <ul>
+           
+                <li><a href="https://rushingfolder.com/show.php?l=0&u=550914&id=43797&tracking_id=   " class="button">CONFIRM YOUR ENTRY NOW </a>
+            
+                 </ul>
+            </div>
+        </div>
+    </div>
+    
+          <div class="container">
+        <div class="carbd">
+            <div class="img-box">
+              </div>
+            <div class="contbent">
+           
+                 </ul>
+            </div>
+        </div>
+        <div class="carhd">
+            <div class="img-box">
+                <img src="wow1.jpg">
+                	
+            </div><p>&nbsp;</p>
+           <p style="font-family:'Droid Serif','Droid Serif';font-style:italic;font-size: 24px;color:rgba(142,91,34,1);font-weight:'bold'"> For example, a $1000 gift card may require 10 completed offers, whereas a $500 gift card will only require 5.
+<br><br>
+What many people do not realize is that there are tons of companies out there using this method, essentially begging people to take their money. Most people don't know about it -- most people do not take the action.
+<br><br>
+All you need to do is take their money!
+<br><br>
+If you're down and out on your bills, or just would like some extra cash, try this quick and easy method of getting free gift cards online today!
+</p><br><r>INSTRUCTIONS: <br>1. Click the image<br>2. Enter requested information<br>3. Enjoy your free gift at any store or swip it for other items.
+ </r>
+<p>&nbsp;</p>
+<p align="center" class="sub_heading_red"><span class="main_text"><font face="Tahoma">&copy; </font> WOWOW FREE GIFTS- All Rights Reserved.</span></p>
+            <div class="content"> 
+            </div>
+        </div>
+ <div class="cacrd">
+            <div class="img-box">
+                 </div>
+            <div class="content">
+         </div>
+        </div>
+    </div>
+     
+
+
+
+    
+</body>
+</html>
