@@ -1,19 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" >
 <head>
-	    <meta charset="UTF-8">
-    <title>WOW free gift card  spin</title>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap" rel="stylesheet">
-    <style>
-	<style>
-* {box-sizing: border-box;}
-
-body { 
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.header {
+  <meta charset="UTF-8">
+  <title>CodePen - Card hover FX</title>
+  <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans&display=swap" rel="stylesheet"><link rel="stylesheet" href="./style.css">
+<style>
+	.header {
   overflow: hidden;
   background-color: #f1f1f1;
   padding: 20px 10px;
@@ -49,111 +41,212 @@ body {
 .header-right {
   float: right;
 }
+	h1{color:blue}
+	.abs,
+h2:after,
+.cards .card figcaption,
+.cards .card:after,
+.news .card figcaption,
+.news .card:after,
+.news .article figcaption {
+  position: absolute;
+}
+.rel,
+h2,
+h2 strong,
+.cards .card,
+.news .card,
+.news .article {
+  position: relative;
+}
+.fix {
+  position: fixed;
+}
+.dfix {
+  display: inline;
+}
+.dib {
+  display: inline-block;
+}
+.db {
+  display: block;
+}
+.dn {
+  display: none;
+}
+.df,
+.cards,
+.news {
+  display: flex;
+}
+.dif {
+  display: inline-flex;
+}
+.dg {
+  display: grid;
+}
+.dig {
+  display: inline-grid;
+}
+.vm,
+h2,
+h2 strong,
+h2 span {
+  vertical-align: middle;
+}
+body {
+  background:white;
+  font-family: 'Alegreya Sans';
+}
+.wrapper {
+  padding: 15px;
+}
+h2 {
+  padding: 10px;
+  padding-left: 25px;
+  color: #ccc;
+  margin: 0;
+}
+h2 strong {
+  z-index: 2;
+  background: #24282f;
+  padding: 4px 8px;
+}
+h2 span {
+  font-size: 0.7em;
+  color: #aaa;
+  margin-left: 10px;
+}
+h2:after {
+  content: '';
+  z-index: 1;
+  bottom: 50%;
+  margin-bottom: -2px;
+  height: 2px;
+  left: 0;
+  right: 0;
+  background: #373d47;
+}
+.cards,
+.news {
+  flex-flow: row wrap;
+}
+.cards .card,
+.news .card {
+  margin: 20px;
+  width: 180px;
+  height: 270px;
+  overflow: hidden;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.8);
+  transform-origin: center top;
+  transform-style: preserve-3d;
+  transform: translateZ(0);
+  transition: 0.3s;
+}
+.cards .card img,
+.news .card img {
+  width: 100%;
+  min-height: 100%;
+}
+.cards .card figcaption,
+.news .card figcaption {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  padding-bottom: 10px;
+  font-size: 20px;
+  background: white;
+  color:green;
+  transform: translateY(100%);
+  transition: 0.3s;
+}
 
-@media screen and (max-width: 500px) {
-  .header a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-  
-  .header-right {
-    float: none;
-  }
+.cards .card:after,
+.news .card:after {
+  content: '';
+  z-index: 10;
+  width: 200%;
+  height: 100%;
+  top: -90%;
+  left: -20px;
+  opacity: 0.1;
+  transform: rotate(45deg);
+  background: linear-gradient(to top, transparent, #fff 15%, rgba(255,255,255,0.5));
+  transition: 0.3s;
 }
-.team{
-    
-	justify-content:center;
-	margin: 10px auto;
-	width: 500px;
-	
-	}
-    .team .card{
-        
-        cursor: pointer;
-        text-align: center
-    }
-    .team .card .side{
-        width:400px;
-        height: 250px;
-        transition: 0.5s;
-    }
-     
-    .team .card .side.side1{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 1;
-        transform: translateY(100px);
-        position: relative;
-        background:deepskyblue;
-       
-    }
-    .team .card:hover .side.side1{
-        background: deepskyblue;
-        transform: translateY(0);
-    }
-    .team .card .side.side2 {
-        padding: 20px;
-	box-sizing: border-box;
-	box-shadow: 0 20px 20px rgba(0, 0, 0, 0.8);
-	transform: translateY(-150px);
-	position: relative;
-	background: #fff;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	
+.cards .card:hover,
+.news .card:hover,
+.cards .card:focus,
+.news .card:focus,
+.cards .card:active,
+.news .card:active {
+  box-shadow: 0 8px 16px 3px rgba(0,0,0,0.6);
+  transform: translateY(-3px) scale(1.05) rotateX(15deg);
 }
-    .team .card:hover .side.side2{
-        transform: translateY(0);
-    }
-     .team .card .side.side2 .img-info h2 {
-	margin: 0;
+.cards .card:hover figcaption,
+.news .card:hover figcaption,
+.cards .card:focus figcaption,
+.news .card:focus figcaption,
+.cards .card:active figcaption,
+.news .card:active figcaption {
+  transform: none;
 }
-    .team .card .side.side2 .img-info p{
-        margin: 0;
-        padding: 0;
-    }
-    .team .card .side.side1 .img-info{
-        opacity: 1;
-        transition: 0.5s;
-        text-align: center;
-    }
-     
-    .team .card:hover .side.side1 .img-info{
-        opacity:1;
-    }
-     
-    .team .card .side.side1 .img-info img{
-        max-width: 100px;
-    }
-     
-    .team .card .side.side1 .img-info h3{
-        text-align: center;
-        font-size: 1.5em;
-        margin: 10px 0 0;
-        padding: 0;
-        color: white;
-        
-    }
-{
-	padding: 5px 15px;
-	border-radius: 50px;
-	background: deepskyblue;
-        color: #fff;
-        
-	display: inline-block;
-	text-decoration: none;
-	font-weight: 600;
-	
-}  
-    }
-    .team .card .side.side2 .img-info a:hover {
-	background: deepskyblue;
-	color: #fff;
+.cards .card:hover:after,
+.news .card:hover:after,
+.cards .card:focus:after,
+.news .card:focus:after,
+.cards .card:active:after,
+.news .card:active:after {
+  transform: rotate(25deg);
+  top: -40%;
+  opacity: 0.15;
 }
-    .team .card .side.side2 .img-info a  {
+.news .article {
+  overflow: hidden;
+  width: 350px;
+  height: 235px;
+  margin: 20px;
+}
+.news .article img {
+  width: 100%;
+  min-height: 100%;
+  transition: 0.2s;
+}
+.news .article figcaption {
+  font-size: 14px;
+  text-shadow: 0 1px 0 rgba(51,51,51,0.3);
+  color:#000;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding: 40px;
+  box-shadow: 0 0 2px rgba(0,0,0,0.2);
+  background: rgba(6,18,53,0.6);
+  opacity: 0;
+  transform: scale(1.15);
+  transition: 0.2s;
+}
+.news .article figcaption h3 {
+  color: #3792e3;
+  font-size: 16px;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+.news .article:hover img,
+.news .article:focus img,
+.news .article:active img {
+  filter: blur(3px);
+  transform: scale(0.97);
+}
+.news .article:hover figcaption,
+.news .article:focus figcaption,
+.news .article:active figcaption {
+  opacity: 1;
+  transform: none;
+}
+figcaption a  {
         background-color:red ;
         -webkit-border-radius: 60px;
         border-radius: 60px;
@@ -185,130 +278,68 @@ body {
      .team .card .side.side2 .img-info a  {
         animation: glowing 1300ms infinite;
       }
-    r{
-    	color:red;
-    }
- .button {
-        background-color: #1c87c9;
-        -webkit-border-radius: 60px;
-        border-radius: 60px;
-        border: none;
-        color: #eeeeee;
-        cursor: pointer;
-        display: inline-block;
-        font-family: sans-serif;
-        font-size: 20px;
-        padding: 5px 15px;
-        text-align: center;
-        text-decoration: none;
-      }
-      @keyframes glowing {
-        0% {
-          background-color: #2ba805;
-          box-shadow: 0 0 5px #2ba805;
-        }
-        50% {
-          background-color: #49e819;
-          box-shadow: 0 0 20px #49e819;
-        }
-        100% {
-          background-color: #2ba805;
-          box-shadow: 0 0 5px #2ba805;
-        }
-      }
-      .button {
-        animation: glowing 1300ms infinite;
-      }
-</style>
-<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+	</style>
 </head>
-<main>
-
-<div class="header">
-  <a href="#default" class="logo">&#127881;WOWO FREE GIFTS &#x1F381;</a>
-
-  </div>
-</div>
-<p style="font-family:'Droid Serif','Droid Serif';font-style:italic;font-size: 24px;color:rgba(142,91,34,1);font-weight:'bold'; text-align: center;" >WOW!! Did you know that it is possible for you to receive free gift cards online -- in the amounts of $500-$1000?<br>
-
-I'm not talking about silly raffles or contests.
-There are secret, little-known ways for you to receive legitimate gift cards from major retailers, just for answering simple surveys and participating in quality control panels. The rewarding of these gift cards is 100% guaranteed.<h1 style="font-weight:'bold'; text-align: center;">
-	&#127881;&#127881;
-CONGRATULATION YOU HAVE QUALIFY FOR OUR  DAIRLY GIFT CARD GIVEAWAY&#127881;&#127881;<br><img src="wow2.jpg " class="centerImage" ></h1></p>
-
-		   <div calss="hh" style="font-weight:'bold'; text-align: center;">
-   	<div class="yy">
-	<h3>Claim these free gift card in three(3) easy steps.</h3><br>
-	<r><b style="text-decoration:underline;"> INSTRUCTION TO FOLLOW:</b><br>1. Click the image.<br>2. Enter you information required.<br>3. WOW!! you can now enjoy your gift card.
-	</div>
-	</div>
-        <div class="team" style="font-weight:'bold'; text-align: center;">
-       <div class="card"style="font-weight:'bold'; text-align: center;">
-          <div class="side side1">
-             <div class="img-info">
-                <img src="images.jpg">
-                <h3>Grab a $750 PayPal Gift Card Now!</h3>
-             </div>
-          </div>
-          <div class="side side2">
-             <div class="img-info">
-               <h2>WOW!! Claim a $750 PayPal free gift</h2>
-                <p>Your Chance to get $750 to Your PayPal Account!.</p>
-             <a href="https://rushingfolder.com/show.php?l=0&u=550914&id=39551&tracking_id=" >CONFIRM YOUR ENTRY NOW <br>&#x1F381;</a>
-             </div>
-          </div>
-       </div>
-       <div class="card">
-          <div class="side side1">
-             <div class="img-info">
-                <img src="Walmart.jpg">
-                <h3>Win a $100 Walmat Gift Card Now!</h3>
-             </div>
-          </div>
-          <div class="side side2">
-             <div class="img-info">
-               <h2>Free $100 walmart gift card  </h2>
-                  <p>You can be the lucky one to get this free gift card. join and Get a $100 Walmart Gift Card! 
-</p>
-                       
-           
-                <a href="https://rushingfolder.com/show.php?l=0&u=550914&id=43797&tracking_id=   " class="button">CONFIRM YOUR ENTRY NOW <br>&#x1F381; </a>
-             </div>
-          </div>
-       </div>
-       <div class="card">
-          <div class="side side1">
-             <div class="img-info">
-                <img src="cashapp.png">
-                <h3>Claim a $1000 CashApp Gift Card Now!</h3>
-             </div>
-          </div>
-          <div class="side side2">
-             <div class="img-info">
-               <h2>CashApp free gift card is now avaliable</h2>
-                     <p>Finish One Last Step to Win a $1000 CashApp Now!.</p>
-                
-                
-                 <a href="https://smrturl.co/o/282127/53271698?s1="class="button">
-CONFIRM ENTRY BEFORE IT'S LATE  &#x1F381;</a>
-   
-
-             </div>
-          </div>
-       </div>
+<body>
+	<div class="header">
+  <a href="#default" class="logo">&#127881;GRAB FREE GIFTS &#x1F381;</a>
     </div>
 
+
+
+<p style="font-family:'Droid Serif','Droid Serif';font-style:italic;font-size: 24px;color:rgba(142,91,34,1);font-weight:'bold'; text-align: center;" >Now you know that it is possible for you to receive free gift cards online -- in the amounts of $500-$1000?
+The rewarding of these gift cards is 100% guaranteed.<br>&#127881;&#127881;&#127881;&#127881;
+</p>
+<h1 style="font-weight:'bold'; text-align: center;">
+	&#127881;
+CONGRATULATION YOU HAVE QUALIFY FOR OUR  DAIRLY GIFT CARD GIVEAWAY&#127881;<br><br><img src="wow2.jpg " class="centerImage" ></h1></p>
+<h1 style="font-weight:'bold'; text-align: center;">Click on the image card to access our gifts</h1>
+<div class="wrapper">
+
+	<h2><strong>FREE GIFT CARD<span>( 100%)</span></strong></h2>
+
+	<div class="cards">
+
+		<figure class="card">
+
+			<img src="cashapp.png" />
+
+			<figcaption style="font-family:'Droid Serif','Droid Serif';font-style:italic;font-size: 24px;color:#00D632;font-weight:'bold'; text-align: center;"> Claim a $1000 CashApp Gift Card Now!           <a href="https://smrturl.co/o/282127/53271698?s1="class="button">
+CONFIRM YOUR ENTRY NOW</a>
+</figcaption>
+
+		</figure>
+
+		
+
+		<figure class="card">
+
+			<img src="Walmart.jpg" />
+
+			<figcaption style="font-family:'Droid Serif','Droid Serif';font-style:italic;font-size: 24px;color:#0071CE;font-weight:'bold'; text-align: center;">Win a $100 Walmat Gift Card Now!<a href="https://rushingfolder.com/show.php?l=0&u=550914&id=43797&tracking_id=   " class="button">CONFIRM YOUR ENTRY NOW</a>
+</figcaption>
+
+		</figure>
+
+		<figure class="card">
+
+			<img src="images.jpg" />
+
+			<figcaption style="font-family:'Droid Serif','Droid Serif';font-style:italic;font-size: 24px;color:#169BD7;font-weight:'bold'; text-align: center;">Grab a $750 PayPal Gift Card Now!
+<a href="https://rushingfolder.com/show.php?l=0&u=550914&id=39551&tracking_id=" >CONFIRM YOUR ENTRY NOW</a>
+</figcaption>
+
+		</figure>
+
+	</div>
      <p style="font-size:34px; color:red; text-align: center;">&#x1F381;&#x1F381;&#x1F381;&#x1F381;<br>OFFERS EXPIRES:</p><p id="demo" style="font-size:40px;color:red;text-align: center;"></p>
   
-    <p style="font-size:34px; color:green; text-align: center;">THE OFFERS ARE STILL AVALIABLE!</p>
+ 
   
-  </div>
-  <br><br><br><br>
-&#127881;&#127881;&#127881;&#127881;&#127881;&#127881;&#127881;&#127881;&#127881;&#127881;&#127881;&#127881;&#127881;&#127881;&#127881;&#127881;&#127881;&#127881;&#127881;&#127881;&#127881;&#127881;&#127881;&#127881;&#127881;&#127881;&#127881;&#127881;&#127881;&#127881;&#127881;&#127881;&#127881;&#127881;&#127881;&#127881;&#127881;&#127881;&#127881;&#127881;&#127881;&#127881;&#127881;&#127881;&#127881;&#127881;&#127881;&#127881;&#127881;
-  <script>
+  
+	  <script>
 // Set the date we're counting down to
-var countDownDate = new Date("Jun 24, 2022 15:37:25").getTime();
+var countDownDate = new Date("Jun 26, 2022 15:37:25").getTime();
 
 // Update the count down every 1 second
 var countdownfunction = setInterval(function() {
@@ -336,5 +367,8 @@ var countdownfunction = setInterval(function() {
   }
 }, 1000);
 </script>
-</main>
+
+	
+  
+</body>
 </html>
